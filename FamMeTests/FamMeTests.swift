@@ -10,10 +10,16 @@ import XCTest
 @testable import FamMe
 
 class FamMeTests: XCTestCase {
-    
+    var viewControllerUnderTest: CalendarViewController!
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        self.viewControllerUnderTest = storyBoard.instantiateViewController(withIdentifier: "CalenerViewController") as! CalendarViewController
+        self.viewControllerUnderTest.loadView()
+        self.viewControllerUnderTest.viewDidLoad()
+        
+        
     }
     
     override func tearDown() {

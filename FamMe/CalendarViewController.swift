@@ -14,12 +14,15 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var MonthLabel: UILabel!
     @IBOutlet weak var Calendar: UICollectionView!
     
-    let date = Date()
+    //February is the second and shortest month of the year in the Julian and Gregorian calendar with 28 days in common years and 29 days in leap years, with the quadrennial 29th day being called the leap day. It is the first of five months to have a length of less than 31 days, and the only month to have less than 30 days. This year February had 28 days in it.
+    // 2016 2018 Feb has 4 days
     
+    let date = Date()
+    var gap: Int = year % 4
     let Months = ["January", "February","March","April","May","June","July","August","September","October","November","December"]
     let DaysOfMonth = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
     var DaysInMonths = [31,28,31,30, 31, 30, 31, 31, 30, 31, 30, 31]
-    
+  // DayInMonths[1] = 29, when gap == 0
     var currentMonth = String()
     
     //The number of "empty cells" at the start of the current month
@@ -36,6 +39,9 @@ class CalendarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if gap == 0 {
+            DaysInMonths[1] = 29
+        }
         currentMonth = Months[monthIndex] // month = 8
         getStartDateDayPosition()
         Calendar.reloadData()
@@ -56,6 +62,13 @@ class CalendarViewController: UIViewController {
         switch currentMonth {
         case "December":
             year += 1
+            //gap = (gap + 1) % 4
+            gap = year % 4
+            if gap == 0 {
+            DaysInMonths[1] = 29
+            } else {
+            DaysInMonths[1] = 28
+            }
             getStartDateDayPosition()
             
             monthIndex = 0
@@ -78,6 +91,12 @@ class CalendarViewController: UIViewController {
         switch currentMonth {
         case "January":
             year -= 1
+            gap = year % 4
+            if gap == 0 {
+                DaysInMonths[1] = 29
+            } else {
+                DaysInMonths[1] = 28
+            }
             getStartDateDayPosition()
             
             monthIndex = 11
