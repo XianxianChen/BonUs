@@ -17,6 +17,8 @@
 		8110B2A221503045002DDF71 /* FamMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8110B2A121503045002DDF71 /* FamMeUITests.swift */; };
 		8110B2B121506C18002DDF71 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8110B2B021506C18002DDF71 /* Login.storyboard */; };
 		81127C9821E3FE9500F8336E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81127C9721E3FE9500F8336E /* LoginViewController.swift */; };
+		81127C9C21E4027E00F8336E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81127C9B21E4027E00F8336E /* User.swift */; };
+		81127C9E21E40BF300F8336E /* ChatLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81127C9D21E40BF200F8336E /* ChatLines.swift */; };
 		81D24259215AE1DF00D007CD /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D24258215AE1DF00D007CD /* CalendarViewController.swift */; };
 		81D2425B215AE3E100D007CD /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2425A215AE3E100D007CD /* DateCollectionViewCell.swift */; };
 		81D2425D215AE56100D007CD /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2425C215AE56100D007CD /* CalendarVars.swift */; };
@@ -80,6 +82,8 @@
 		8110B2A321503045002DDF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8110B2B021506C18002DDF71 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		81127C9721E3FE9500F8336E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		81127C9B21E4027E00F8336E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		81127C9D21E40BF200F8336E /* ChatLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLines.swift; sourceTree = "<group>"; };
 		81D24258215AE1DF00D007CD /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		81D2425A215AE3E100D007CD /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
 		81D2425C215AE56100D007CD /* CalendarVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
@@ -154,15 +158,14 @@
 			isa = PBXGroup;
 			children = (
 				8110B2AF21506BEF002DDF71 /* Supporting FIles */,
-				8110B2802150303F002DDF71 /* HomeViewController.swift */,
-				81D24258215AE1DF00D007CD /* CalendarViewController.swift */,
+				81127C9921E4024100F8336E /* View Controllers */,
 				81D2425C215AE56100D007CD /* CalendarVars.swift */,
 				81D2425A215AE3E100D007CD /* DateCollectionViewCell.swift */,
-				8110B2822150303F002DDF71 /* Main.storyboard */,
+				81127C9A21E4025500F8336E /* Story Boards */,
 				81F688BD21C1B0C0009CBDB7 /* NetworkHelper.swift */,
 				81F688BF21C1BB25009CBDB7 /* HealthStore.swift */,
-				8110B2B021506C18002DDF71 /* Login.storyboard */,
-				81127C9721E3FE9500F8336E /* LoginViewController.swift */,
+				81127C9B21E4027E00F8336E /* User.swift */,
+				81127C9D21E40BF200F8336E /* ChatLines.swift */,
 				8110B28821503045002DDF71 /* Assets.xcassets */,
 				8110B28D21503045002DDF71 /* Info.plist */,
 				8110B2852150303F002DDF71 /* FamMe.xcdatamodeld */,
@@ -195,6 +198,25 @@
 				8110B28A21503045002DDF71 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting FIles";
+			sourceTree = "<group>";
+		};
+		81127C9921E4024100F8336E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8110B2802150303F002DDF71 /* HomeViewController.swift */,
+				81D24258215AE1DF00D007CD /* CalendarViewController.swift */,
+				81127C9721E3FE9500F8336E /* LoginViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		81127C9A21E4025500F8336E /* Story Boards */ = {
+			isa = PBXGroup;
+			children = (
+				8110B2822150303F002DDF71 /* Main.storyboard */,
+				8110B2B021506C18002DDF71 /* Login.storyboard */,
+			);
+			path = "Story Boards";
 			sourceTree = "<group>";
 		};
 		F01F594B22B22CF6EBAE7CCC /* Pods */ = {
@@ -424,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81127C9E21E40BF300F8336E /* ChatLines.swift in Sources */,
 				81127C9821E3FE9500F8336E /* LoginViewController.swift in Sources */,
 				81D24259215AE1DF00D007CD /* CalendarViewController.swift in Sources */,
 				8110B2812150303F002DDF71 /* HomeViewController.swift in Sources */,
@@ -432,6 +455,7 @@
 				81D2425D215AE56100D007CD /* CalendarVars.swift in Sources */,
 				8110B2872150303F002DDF71 /* FamMe.xcdatamodeld in Sources */,
 				81D2425B215AE3E100D007CD /* DateCollectionViewCell.swift in Sources */,
+				81127C9C21E4027E00F8336E /* User.swift in Sources */,
 				81F688C021C1BB25009CBDB7 /* HealthStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
